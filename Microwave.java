@@ -48,10 +48,10 @@ final class Microwave {
                 + " the amount of time it takes to microwave certain"
                 + " types and amounts of food.");
 
-        // Use a scanner to get the mass from the user
+        // Use a scanner to get the food and quantity from the user
         Scanner scanner = new Scanner(System.in);
 
-        // Declare mass double variable
+        // Declare timeInMinutes double variable
         double timeInMinutes = 0;
 
         // Declare foodAsString String variable
@@ -66,12 +66,12 @@ final class Microwave {
         // Declare numberOfItemInt int variable
         int numberOfItemInt;
 
-        // Do while loop to run until valid mass is entered
+        // Do while loop to run until valid food and quantity is entered
         do {
-            // Message to ask user for mass
+            // Message to ask user for food
             System.out.println("Please enter the"
                     + " food you will be heating, Sub, Pizza or Soup: ");
-            // Get the mass as a string
+            // Get the food as a string
             foodAsString = scanner.nextLine();
 
             // If statement for valid input .equals is used to compare strings
@@ -95,7 +95,7 @@ final class Microwave {
             }
             // message for number of items
             System.out.println("Please enter the number of the food"
-                    + " item you will be heating(max 3 items): ");
+                    + " item(s) you will be heating(max 3 items): ");
             // Get the number of items as a string
             numberOfItemString = scanner.nextLine();
             try {
@@ -107,6 +107,7 @@ final class Microwave {
                 if (numberOfItemInt == 1 || numberOfItemInt == 2
                         || numberOfItemInt == 3) {
                     // Break the loop if the input is valid
+                    // And set time in minutes
                     if (numberOfItemInt == 1) {
                         timeInMinutes = minCookTime;
                         break;
